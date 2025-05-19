@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <!-- <base href="/"> -->
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Personal Portfolio">
+  <meta property="og:author" content="Sanjay Adhikari">
+  <meta property="og:description"
+    content="Explore my projects, skills, and contact details on my personal developer portfolio.">
+  <meta property="og:image" content="https://sanjayadhikari-007.github.io/personal_cv/assets/assets/imgs/thumbnail.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://sanjaylive.tech">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Personal Portfolio">
+  <meta name="twitter:description" content="Explore my developer portfolio, skills, and projects.">
+  <meta name="twitter:image"
+    content="https://sanjayadhikari-007.github.io/personal_cv/assets/assets/imgs/thumbnail.png">
+
+
+  <!-- Basic SEO Meta Tags -->
+  <title>Personal Portfolio | Sanjay Adhikari</title>
+  <meta name="description"
+    content="Explore my personal portfolio built with Flutter. Showcasing my projects, skills, and ways to connect.">
+  <meta name="keywords"
+    content="Flutter Developer, Portfolio, Personal Website, Projects, Skills, Developer, Web Developer, Sanjay Adhikari, CSIT, Node Js Developer, Backend Developer, Student, Intern, Junior Developer">
+  <meta name="author" content="Sanjay Adhikari">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sanjaylive.tech">
+
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Personal Portfolio | Sanjay Adhikari">
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/SanjayAdhikari-007/personal_cv/refs/heads/main/favicon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/SanjayAdhikari-007/personal_cv/refs/heads/main/favicon.png" />
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .loader-wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader-title {
+      font-size: 26px;
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+
+
+    .three-arched-loader {
+      --size: 50px;
+      /* Default size - can be overridden */
+      --color: #4285F4;
+      /* Default color - can be overridden */
+      --ring-width: calc(var(--size) * 0.08);
+      --animation-duration: 10s;
+      /* Slower animation (3 seconds) */
+      position: relative;
+      width: var(--size);
+      height: var(--size);
+      padding: calc(var(--size) * 0.04);
+    }
+
+    .three-arched-loader svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      animation: rotate var(--animation-duration) linear infinite;
+    }
+
+    .three-arched-loader .arc {
+      fill: none;
+      stroke: var(--color);
+      stroke-width: var(--ring-width);
+      stroke-linecap: round;
+      stroke-dasharray: 0 300;
+      animation: arc-animation var(--animation-duration) ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+
+      0%,
+      50% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(0deg);
+      }
+
+      25% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(240deg);
+      }
+
+      50.1%,
+      100% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(240deg);
+      }
+
+      75% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(400deg);
+      }
+    }
+
+    @keyframes arc-animation {
+
+      0%,
+      50% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+      }
+
+      12.5% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 210 90;
+      }
+
+      25% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 10 290;
+      }
+
+      37.5% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 210 90;
+      }
+
+      50% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 0 300;
+      }
+
+      50.1%,
+      100% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+      }
+
+      62.5% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 210 90;
+      }
+
+      75% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 10 290;
+      }
+
+      87.5% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 210 90;
+      }
+
+      100% {
+        animation-timing-function: ease-in-out;
+        stroke-dasharray: 0 300;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sanjay Adhikari",
+    "url": "https://sanjayadhikari-007.github.io/personal_cv/",
+    "sameAs": [
+      "https://www.linkedin.com/in/sanjay-adhikari-9446b220a/",
+      "https://github.com/SanjayAdhikari-007"
+    ],
+    "jobTitle": "Flutter Developer",
+    "description": "Personal portfolio of a Flutter developer showcasing skills, projects, and contact information."
+  }
+  </script>
+
+</head>
+
+<body>
+
+
+  <div class="loader-wrapper" id="loader">
+    <div class="three-arched-loader" style="--size: 55px; --color: #18ffff;">
+      <svg viewBox="0 0 100 100">
+        <!-- First arc at 210° -->
+        <path class="arc" d="M50,10 A40,40 0 0,1 85,50" transform="rotate(210 50 50)" />
+
+        <!-- Second arc at 90° -->
+        <path class="arc" d="M50,10 A40,40 0 0,1 85,50" transform="rotate(90 50 50)" />
+
+        <!-- Third arc at -30° -->
+        <path class="arc" d="M50,10 A40,40 0 0,1 85,50" transform="rotate(-30 50 50)" />
+      </svg>
+    </div>
+
+    <div class="loader-title">Personal Portfolio</div>
+
+  </div>
+
+
+
+  <script src="flutter_bootstrap.js" async></script>
+
+</body>
+
+</html>
